@@ -57,7 +57,9 @@ const initialState = {
   ],
 }
 const sagaMiddleware = createSagaMiddleware()
+
 let middleware = [thunk,sagaMiddleware];
+
 const store = createStore(todoReducer, initialState, applyMiddleware(...middleware));
 
 const mapStateToProps = (state)=> {

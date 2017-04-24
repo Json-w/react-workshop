@@ -1,3 +1,5 @@
+import React from "react"
+
 export default ({ options, onChange, ...others}) => (
   <div>
     {Object.keys(options).map((key, index) => (

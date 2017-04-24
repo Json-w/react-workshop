@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "test": "ava ./test -t",
+    "ava": "ava",
+    "cover": "nyc ava ./test -t",
     "start": "next dev"
   },
   "dependencies": {
@@ -14,5 +17,26 @@
     "redux-saga": "^0.14.3",
     "redux-thunk": "^2.2.0",
     "rxjs": "^5.2.0"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-register": "^6.24.0",
+    "enzyme": "^2.8.0",
+    "jsdom": "^9.12.0",
+    "nyc": "^10.1.2",
+    "react-addons-test-utils": "^15.4.2",
+    "sinon": "^2.1.0"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "babel": {
+    "presets": [
+      "next/babel",
+      "@ava/stage-4"
+    ]
   }
 }
